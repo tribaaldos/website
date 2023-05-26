@@ -6,6 +6,9 @@ var logger = require('morgan');
 var session = require('express-session')
 var passport = require('passport')
 
+//Configure passport middleware
+require('./config/passport')
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
