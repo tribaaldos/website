@@ -8,6 +8,8 @@ var passport = require('passport')
 
 // load the "secrets" in the .env file
 require('dotenv').config();
+//Connect to database
+require('./config/database')
 //Configure passport middleware
 require('./config/passport')
 
