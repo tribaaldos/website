@@ -23,8 +23,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/movies',
-    failureRedirect: '/movies'
+    successRedirect: '/',
+    failureRedirect: '/'
   }
 ));
 
@@ -32,7 +32,7 @@ router.get('/oauth2callback', passport.authenticate(
 router.get('/logout', function(req, res){
   req.logout(function() {
     //Change path for your "landing page"
-    res.redirect('/movies');
+    res.redirect('/');
   });
 });
 
