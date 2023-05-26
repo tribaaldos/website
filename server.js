@@ -6,8 +6,11 @@ var logger = require('morgan');
 var session = require('express-session')
 var passport = require('passport')
 
+// load the "secrets" in the .env file
+require('dotenv').config();
 //Configure passport middleware
 require('./config/passport')
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -31,6 +34,11 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
