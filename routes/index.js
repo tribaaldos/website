@@ -4,7 +4,7 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'ANGEL WEBSITE' });
+  res.render('index', { title: 'E-COMMERCE' });
 });
 
 // Google OAuth login route
