@@ -20,6 +20,9 @@
     "passport-google-oauth": "^2.0.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-express": "^0.3.5",
     "nodemon": "^2.0.22"
   }
 }
