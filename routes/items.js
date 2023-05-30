@@ -3,6 +3,7 @@ const router = express.Router();
 // You'll be creating this controller module next
 const itemsCtrl = require('../controllers/items');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
+
 	
 // GET /item
 router.get('/', itemsCtrl.index);
@@ -12,5 +13,7 @@ router.get('/new', ensureLoggedIn, itemsCtrl.new);
 router.get('/:id', itemsCtrl.show);
 // POST /item
 router.post('/', ensureLoggedIn, itemsCtrl.create);
-	
+
+router.delete('/:id', itemsCtrl.delete);
+
 module.exports = router;
