@@ -8,6 +8,16 @@
   <div>Price </div>
   <div><%= item.price %></div>
 
+  <div>Currency:</div>
+  <div><%= item.currency %></div>
+  <a href="/items/<%= item._id %>/edit">EDIT</a>
+
+  <form action="/items/<%= item._id %>/comments" method="POST">
+        
+    <input name="text">
+    <button type="submit">ADD COMMENT</button>
+  </form>
+  
 </section>
 
 

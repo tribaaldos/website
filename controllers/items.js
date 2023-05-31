@@ -7,6 +7,8 @@ module.exports = {
   new: newItem,
   create,
   delete: deleteItem,
+  edit,
+  updateItem
 };
 
 async function index(req, res) {
@@ -47,4 +49,28 @@ async function deleteItem(req, res) {
     {_id: req.params.id, user: req.user._id}
   );
   res.redirect('/items');
+}
+
+//UPDATE A ITEM
+async function updateItem(req, res) {
+  try {
+    const updateItem = await Item.findOneAndUpdate(
+      {_id: req.params.id, user: req.user._id},
+      // update object with updated properties
+      req.body,
+      // options object {new: true} returns updated doc
+      {new: true}
+    );
+    return res.redirect(`/items/${updateItem._id}`);
+  } catch (e) {
+    console.log(e.message);
+    return res.redirect('/items');
+  }
+}
+
+//EDIT A ITEM
+async function edit(req, res) {
+  const item = await Item.findOne({_id: req.params.id, user: req.user._id});
+  if (!item) return res.redirect('/items');
+  res.render('items/edit', { item, title: 'edit page' });
 }

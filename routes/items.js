@@ -11,9 +11,12 @@ router.get('/', itemsCtrl.index);
 router.get('/new', ensureLoggedIn, itemsCtrl.new);
 // GET /item/:id (show functionality) MUST be below new route
 router.get('/:id', itemsCtrl.show);
+router.get('/:id/edit', ensureLoggedIn, itemsCtrl.edit);
 // POST /item
 router.post('/', ensureLoggedIn, itemsCtrl.create);
 
+//PUT ITEM
+router.put('/:id', ensureLoggedIn, itemsCtrl.updateItem);
 router.delete('/:id', itemsCtrl.delete);
 
 module.exports = router;

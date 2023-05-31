@@ -14,11 +14,16 @@
         <td><%= i.title %></td>
         
         <td><%= i.price %></td>
+
+        <td><%= i.currency %></td>
+
+      
         
         <td><a href="/items/<%= i._id %>">DETAILS</a></td>
-        <td><a href="/items/<%= i._id %>">X</a></td>
 
-        </form>
+        <td><form action="/items/<%= i._id %>?_method=DELETE" method="POST">
+        <button type="submit">X</button></form></td>
+
       </tr>
       
       <% }); %>
