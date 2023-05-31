@@ -1,6 +1,12 @@
 const mongoose = require('mongoose')
 
+const Schema = mongoose.Schema;
+
 const itemSchema = new Schema({
-    ID: number,
-    type: 'String',
+    ID: {
+        type: Number
+    },
+    type: {
+        type: Strying
+    },
 })
