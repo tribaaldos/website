@@ -35,6 +35,9 @@ const itemSchema = new Schema({
         type: String,
         enum: ['$', '€', 'Yen', 'CH.']
     },
+    image: {
+      type: String
+    },
 
     reviews: [reviewSchema],
     
