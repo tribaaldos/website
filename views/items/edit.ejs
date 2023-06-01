@@ -7,25 +7,29 @@
   <input type="number" name="price" value ="<%= item.price %>">
   <div>
     <label class="label-uno">Currency:</label>
-    <select name="currency" value ="<% item.currency %>">
-      <option value="USD">United States Dollar (USD)</option>
-      <option value="EUR">Euro (EUR)</option>
-      <option value="JPY">Japanese Yen (JPY)</option>
-      <option value="GBP">British Pound (GBP)</option>
-      <option value="CAD">Canadian Dollar (CAD)</option>
-      <option value="AUD">Australian Dollar (AUD)</option>
-      <option value="CHF">Swiss Franc (CHF)</option>
-      <option value="CNY">Chinese Yuan (CNY)</option>
-      <option value="INR">Indian Rupee (INR)</option>
-      <option value="BRL">Brazilian Real (BRL)</option>
+    <select name="currency">
+      <option value="USD" <%= item.currency === 'USD' ? 'selected' : '' %>>United States Dollar (USD)</option>
+      <option value="EUR" <%= item.currency === 'EUR' ? 'selected' : '' %>>Euro (EUR)</option>
+      <option value="JPY" <%= item.currency === 'JPY' ? 'selected' : '' %>>Japanese Yen (JPY)</option>
+      <option value="GBP" <%= item.currency === 'GBP' ? 'selected' : '' %>>British Pound (GBP)</option>
+      <option value="CAD" <%= item.currency === 'CAD' ? 'selected' : '' %>>Canadian Dollar (CAD)</option>
+      <option value="AUD" <%= item.currency === 'AUD' ? 'selected' : '' %>>Australian Dollar (AUD)</option>
+      <option value="CHF" <%= item.currency === 'CHF' ? 'selected' : '' %>>Swiss Franc (CHF)</option>
+      <option value="CNY" <%= item.currency === 'CNY' ? 'selected' : '' %>>Chinese Yuan (CNY)</option>
+      <option value="INR" <%= item.currency === 'INR' ? 'selected' : '' %>>Indian Rupee (INR)</option>
+      <option value="BRL" <%= item.currency === 'BRL' ? 'selected' : '' %>>Brazilian Real (BRL)</option>
     </select>
+    
   </div>
 
   <div>
     <label class="label-uno">Quantity:</label>
     <input type="number" name="quantity" value ="<%= item.quantity %>">
   </div>
-
+  <div>
+    <label class="label-uno">Brand:</label>
+    <input type="text" name="brand" value ="<%= item.brand %>">
+  </div>
   <div>
     <label class="label-uno">Description:</label>
     <textarea name="description" ><%= item.description %></textarea>
@@ -33,16 +37,19 @@
 
   <div>
     <label class="label-uno" style="color: black">Category:</label>
-    <select name="category" value ="<%= item.category %>">
-      <option value="shirts">Shirts</option>
-      <option value="pants">Pants</option>
-      <option value="dresses">Dresses</option>
-      <option value="skirts">Skirts</option>
-      <option value="jackets">Jackets</option>
-      <option value="sweaters">Sweaters</option>
-      <option value="activewear">Activewear</option>
-      <option value="underwear">Underwear</option>
-      <option value="accessories">Accessories</option>
+    <select name="category">
+     
+      <option value="shirts"<%= item.category === 'shirts' ? 'selected' : '' %>>Shirts</option>
+      <option value="pants"<%= item.category === 'pants' ? 'selected' : '' %>>Pants</option>
+      <option value="dresses"<%= item.category === 'dresses' ? 'selected' : '' %>>Dresses</option>
+      <option value="skirts"<%= item.category === 'skirts' ? 'selected' : '' %>>Skirts</option>
+      <option value="jackets"<%= item.category === 'jackets' ? 'selected' : '' %>>Jackets</option>
+      <option value="shoes"<%= item.category === 'shoes' ? 'selected' : '' %>>Shoes</option>
+      <option value="sweaters"<%= item.category === 'sweaters' ? 'selected' : '' %>>Sweaters</option>
+      <option value="activewear"<%= item.category === 'activewear' ? 'selected' : '' %>>Activewear</option>
+      <option value="underwear"<%= item.category === 'underwear' ? 'selected' : '' %>>Underwear</option>
+      <option value="accessories"<%= item.category === 'accessories' ? 'selected' : '' %>>Accessories</option>
+   
     </select>
   </div>
 

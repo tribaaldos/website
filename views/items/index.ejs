@@ -8,13 +8,16 @@
       <th>Currency</th>
       <th>Quantity</th>
       <th>Description</th>
+      <th>Brand</th>
       <th>Category</th>
+      <th>Size</th>
       <th>Images</th>
     </tr>
   </thead>
   <tbody>
     <% items.forEach(function(i) { %>
       <tr>
+        <div id="elements">
         <td><%= i.title %></td>
         
         <td><%= i.price %></td>
@@ -24,6 +27,8 @@
         <td><%= i.quantity %></td>
 
         <td><%= i.description %></td>
+
+        <td><%= i.brand %></td>
         
         <td><%= i.category %></td>
 
@@ -34,6 +39,7 @@
 
         <td><form action="/items/<%= i._id %>?_method=DELETE" method="POST">
         <button type="submit">X</button></form></td>
+        </div>
 
       </tr>
       

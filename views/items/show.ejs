@@ -11,8 +11,12 @@
   <div class ="label-uno">Currency:</div>
   <div><%= item.currency %></div>
   
+  
   <div class ="label-uno">Quantity:</div>
   <div><%= item.quantity %></div>
+
+  <div class ="label-uno">Brand:</div>
+  <div><%= item.brand %></div>
 
   <div class ="label-uno">Decription</div>
   <div><%= item.description %></div>
@@ -20,8 +24,20 @@
   <div class ="label-uno">Category:</div>
   <div><%= item.category %></div>
 
+  <div class ="label-uno">Size:</div>
+  <div><%= item.size %></div>
+
   <div class ="label-uno">Image:</div>
   <div><img src="<%= item.image %>" alt="<%= item.title %>"></div>
+  
+
+
+
+
+
+
+
+
   
   <a href="/items/<%= item._id %>/edit">EDIT</a>
 

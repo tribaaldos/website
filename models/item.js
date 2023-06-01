@@ -35,7 +35,10 @@ const reviewSchema = new Schema({
       type: String,
       enum: ['USD', 'EUR', 'JPY', 'GBP', 'CAD', 'AUD', 'CHF', 'CNY', 'INR', 'BRL']
     },
-    image: {
+    quantity: {
+      type: Number
+    },
+    brand: {
       type: String
     },
     description: {
@@ -43,10 +46,24 @@ const reviewSchema = new Schema({
     },
     category: {
       type: String,
-      enum: ['shirts', 'pants', 'dresses', 'skirts', 'jackets', 'sweaters', 'activewear', 'underwear', 'accessories']
+      enum: ['shirts', 'pants', 'dresses', 'skirts', 'jackets', 'shoes', 'sweaters', 'activewear', 'underwear', 'accessories']
     },
-    quantity: {
-      type: Number
+    size: {
+      type: String,
+      enum: ['S', 'M', 'L'],
+      required: function() {
+        return this.category !== 'shoes';
+      }
+    },
+    sizeShoes: {
+      type: String,
+      enum: ['8', '9', '10'],
+      required: function() {
+        return this.category === 'shoes';
+      }
+    },
+    image: {
+      type: String
     },
     reviews: [reviewSchema],
     user: {
@@ -57,6 +74,7 @@ const reviewSchema = new Schema({
     userName: String,
     userAvatar: String,
   });
+  
   
 
 

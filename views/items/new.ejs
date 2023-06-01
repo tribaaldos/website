@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-
+<script src="/javascripts/new.js"></script>
 <form id="new-form" action="/items" method="POST">
   <div>
     <label>Name:</label>
@@ -31,7 +31,10 @@
     <label>Quantity:</label>
     <input type="number" name="quantity">
   </div>
-
+  <div>
+    <label>Brand:</label>
+    <input type="text" name="brand">
+  </div>
   <div>
     <label>Description:</label>
     <textarea name="description"></textarea>
@@ -39,25 +42,45 @@
 
   <div>
     <label>Category:</label>
-    <select name="category">
+    <select name="category" onchange="showSizeMenu(); showSizeShoe();">
       <option value="shirts">Shirts</option>
       <option value="pants">Pants</option>
       <option value="dresses">Dresses</option>
       <option value="skirts">Skirts</option>
       <option value="jackets">Jackets</option>
+      <option value="shoes">Shoes</option>
       <option value="sweaters">Sweaters</option>
       <option value="activewear">Activewear</option>
       <option value="underwear">Underwear</option>
       <option value="accessories">Accessories</option>
     </select>
-  </div>
-
+    
+    <div id="sizeMenu" style="display: none;">
+      <label>Size:</label>
+      <select name="size">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+    </div>
+    <div id="sizeShoe" style="display: none;">
+      <label>Size:</label>
+      <select name="sizeShoes">
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+    
+    
+ 
   <div>
     <label>Image:</label>
     <input type="text" name="image">
   </div>
 
   <input type="submit" value="Add Item">
+
 </form>
 
 
