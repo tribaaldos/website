@@ -1,4 +1,5 @@
 <%- include('../partials/header') %>
+<script defer src="/javascripts/new.js"></script>
 <form id="new-form" action="/items/<%= item._id %>?_method=PUT" method="POST">
 
   <label class="label-uno">Name:</label>
@@ -37,7 +38,7 @@
 
   <div>
     <label class="label-uno" style="color: black">Category:</label>
-    <select name="category">
+    <select name="category" onchange="showSizeMenu(); showSizeShoe();">
      
       <option value="shirts"<%= item.category === 'shirts' ? 'selected' : '' %>>Shirts</option>
       <option value="pants"<%= item.category === 'pants' ? 'selected' : '' %>>Pants</option>
@@ -50,6 +51,22 @@
       <option value="underwear"<%= item.category === 'underwear' ? 'selected' : '' %>>Underwear</option>
       <option value="accessories"<%= item.category === 'accessories' ? 'selected' : '' %>>Accessories</option>
    
+    </select>
+  </div>
+  <div id="sizeMenu" style="display: none;" name="size">
+    <label>Size:</label>
+    <select name="size">
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+    </select>
+  </div>
+  <div id="sizeShoe" style="display: none;" name="size">
+    <label>Size:</label>
+    <select name="sizeShoes">
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
     </select>
   </div>
 

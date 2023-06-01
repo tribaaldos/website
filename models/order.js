@@ -3,10 +3,27 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
-    ID: {
-        type: Number
+    user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+    items: [{
+        item: {    
+        type: Schema.Types.ObjectId,
+        ref: 'Item',
+        required: true,
+    }, 
+        quantity: {
+            type: Number,
+            required: true,
     },
-    type: {
-        type: Strying
-    },
+
+    }],
+        isPaid: {
+            type: Boolean,
+            default: false
+        },
 })
+
+module.exports = mongoose.model('Order', orderSchema);
