@@ -24,33 +24,40 @@ const reviewSchema = new Schema({
     timestamps: true
   });
   
-const itemSchema = new Schema({
+  const itemSchema = new Schema({
     title: {
-        type: String
+      type: String
     },
     price: {
-        type: Number
+      type: Number
     },
     currency: {
-        type: String,
-        enum: ['$', '€', 'Yen', 'CH.']
+      type: String,
+      enum: ['USD', 'EUR', 'JPY', 'GBP', 'CAD', 'AUD', 'CHF', 'CNY', 'INR', 'BRL']
     },
     image: {
       type: String
     },
-
+    description: {
+      type: String
+    },
+    category: {
+      type: String,
+      enum: ['shirts', 'pants', 'dresses', 'skirts', 'jackets', 'sweaters', 'activewear', 'underwear', 'accessories']
+    },
+    quantity: {
+      type: Number
+    },
     reviews: [reviewSchema],
-    
     user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-      },
-      userName: String,
-      userAvatar: String,
-      
-})
-
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+    userName: String,
+    userAvatar: String,
+  });
+  
 
 
 module.exports = mongoose.model('Item', itemSchema);

@@ -32,3 +32,24 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.img-small {
+  height: 50px;
+}
+
+/* .label-uno {
+  color: black;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+.label-uno {
+  color: black;
+}

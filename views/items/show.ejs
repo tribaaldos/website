@@ -1,22 +1,29 @@
 <%- include('../partials/header') %>
-<link rel="stylesheet" href="/stylesheets/style.css">
+<!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
 <section id="show-page">
 
-  <div>Name: </div>
+  <div class ="label-uno">Name: </div>
   <div><%= item.title %></div>
 
-  <div>Price </div>
+  <div class ="label-uno">Price: </div>
   <div><%= item.price %></div>
 
-  <div>Currency:</div>
+  <div class ="label-uno">Currency:</div>
   <div><%= item.currency %></div>
-  <a href="/items/<%= item._id %>/edit">EDIT</a>
+  
+  <div class ="label-uno">Quantity:</div>
+  <div><%= item.quantity %></div>
 
-  <!-- <form action="/items/<%= item._id %>/comments" method="POST">
-        
-    <input name="text">
-    <button type="submit">ADD COMMENT</button>
-  </form> -->
+  <div class ="label-uno">Decription</div>
+  <div><%= item.description %></div>
+  
+  <div class ="label-uno">Category:</div>
+  <div><%= item.category %></div>
+
+  <div class ="label-uno">Image:</div>
+  <div><img src="<%= item.image %>" alt="<%= item.title %>"></div>
+  
+  <a href="/items/<%= item._id %>/edit">EDIT</a>
 
   <br><br><h2>Reviews</h2>
 <form id="add-review-form" method="POST"

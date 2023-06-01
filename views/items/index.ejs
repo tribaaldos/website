@@ -5,7 +5,11 @@
     <tr>
       <th>Title</th>
       <th>Price</th>
-      <th></th>
+      <th>Currency</th>
+      <th>Quantity</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Images</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +21,14 @@
 
         <td><%= i.currency %></td>
 
-      
+        <td><%= i.quantity %></td>
+
+        <td><%= i.description %></td>
+        
+        <td><%= i.category %></td>
+
+        
+        <td><img class="img-small" src="<%= i.image %>" alt="<%= i.title %>"></td>
         
         <td><a href="/items/<%= i._id %>">DETAILS</a></td>
 

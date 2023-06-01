@@ -1,11 +1,58 @@
 <%- include('../partials/header') %>
 <form id="new-form" action="/items/<%= item._id %>?_method=PUT" method="POST">
 
-  <label>Name:</label>
+  <label class="label-uno">Name:</label>
   <input type="text" name="title" value="<%= item.title %>">
-  <label>Price:</label>
+  <label class="label-uno">Price:</label>
   <input type="number" name="price" value ="<%= item.price %>">
+  <div>
+    <label class="label-uno">Currency:</label>
+    <select name="currency" value ="<% item.currency %>">
+      <option value="USD">United States Dollar (USD)</option>
+      <option value="EUR">Euro (EUR)</option>
+      <option value="JPY">Japanese Yen (JPY)</option>
+      <option value="GBP">British Pound (GBP)</option>
+      <option value="CAD">Canadian Dollar (CAD)</option>
+      <option value="AUD">Australian Dollar (AUD)</option>
+      <option value="CHF">Swiss Franc (CHF)</option>
+      <option value="CNY">Chinese Yuan (CNY)</option>
+      <option value="INR">Indian Rupee (INR)</option>
+      <option value="BRL">Brazilian Real (BRL)</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="label-uno">Quantity:</label>
+    <input type="number" name="quantity" value ="<%= item.quantity %>">
+  </div>
+
+  <div>
+    <label class="label-uno">Description:</label>
+    <textarea name="description" ><%= item.description %></textarea>
+  </div>
+
+  <div>
+    <label class="label-uno" style="color: black">Category:</label>
+    <select name="category" value ="<%= item.category %>">
+      <option value="shirts">Shirts</option>
+      <option value="pants">Pants</option>
+      <option value="dresses">Dresses</option>
+      <option value="skirts">Skirts</option>
+      <option value="jackets">Jackets</option>
+      <option value="sweaters">Sweaters</option>
+      <option value="activewear">Activewear</option>
+      <option value="underwear">Underwear</option>
+      <option value="accessories">Accessories</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="label-uno">Image:</label>
+    <input type="text" name="image" value ="<%= item.image %>">
+  </div>
+
   <input type="submit" value="Update Item">
+
 </form>
 
 

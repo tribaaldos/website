@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema;
 
-const itemSchema = new Schema({
+const orderSchema = new Schema({
     ID: {
         type: Number
     },
