@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+    <table id="list">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>User</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% orders.forEach(function(order) { %>
+                <tr>
+                    <td>
+                        <%= order._id %>
+                    </td>
+                    <td>
+                        <%= order.updatedAt.toLocaleString('en-GB') %>
+                    </td>
+                    <% order.items.forEach(function(item) { %>
+                        <td>
+                            <%= item.item.price %>
+                        </td>
+                        <td>
+                            <%= item.quantity %>
+                        </td>
+                        <% }) %>
+                            <td>
+                                <%= order.user.name %>
+                            </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <%- include('../partials/footer') %>

@@ -31,8 +31,13 @@
   <div><img src="<%= item.image %>" alt="<%= item.title %>"></div>
   
 
-
-
+  <form action="/orders/<%= item._id %>" method="POST">
+    <input type="hidden" name="itemId" value="<%= item._id %>">
+    <label for="itemQty">Quantity:
+      <input type="number" name="quantity" min="1" required>
+    </label>
+    <button type="submit">ADD TO CART</button>
+  </form>
 
 
 
