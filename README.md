@@ -39,8 +39,17 @@
 </ul>
 
 <h2>Screenshots</h2>
+<strong>Home page</Strong>
+![Screenshot 2023-06-02 at 10 08 42](https://github.com/tribaaldos/website/assets/14943193/4a78ea48-a8d4-4033-9866-472e4dcaefe7)
+
+<strong>All Items</strong>
 ![Screenshot 2023-06-02 at 01 02 11](https://github.com/tribaaldos/website/assets/14943193/c6207089-db1c-4136-93ba-7d00c4235650)
 
+<strong> Edit Page </strong>
+![Screenshot 2023-06-02 at 10 21 32](https://github.com/tribaaldos/website/assets/14943193/b042dc73-20be-4f94-887b-44b2500f0795)
+
+<h2> Website </h2>
+https://angel-e-commerce.herokuapp.com/
 
 <h2> Getting Started </h2>
 <li>Updating the chart with more options</li>
