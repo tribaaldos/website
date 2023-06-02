@@ -5,7 +5,7 @@
 <h2>Features</h2>
 
 <ul>
-<li><strong>User Registration and Authentication</strong>: Users can create accounts, log in, and manage their profile information.</li>
+<li><strong>User Registration and Authentication</strong>: Users can create accounts, log in.</li>
 <li><strong>Product Catalog</strong>: The application provides a comprehensive catalog of products with details such as title, description, price, and images.</li>
 <li><strong>Shopping Cart</strong>: A shopping cart functionality allows users to add products.
 <li><strong>User Reviews and Ratings</strong>: Customers can leave reviews and ratings for products, helping others make informed purchasing decisions.</li>
@@ -28,8 +28,6 @@
 <li>Start the application: <code>nodemon</code></li>
 <li>Open your web browser and visit <code>http://localhost:3000</code> to access the application.</li>
 </ol>
-
-<p>Note: Make sure you have Node.js and npm installed on your machine before proceeding with the installation.</p>
 
 <h2>Technologies Used</h2>
 
