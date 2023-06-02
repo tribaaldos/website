@@ -1,11 +1,11 @@
 <h1>E-Commerce Web Application</h1>
 
-<p>This is an e-commerce web application designed to provide a platform for online shopping. It offers a user-friendly interface for customers to browse and purchase products, as well as an administration panel for managing products, orders, and user accounts.</p>
+<p>This is an e-commerce web application designed to provide a platform for online shopping. It offers a user-friendly interface for customers to browse and purchase products, as well as an administration panel for managing products, orders, and log in with your google account</p>
 
 <h2>Features</h2>
 
 <ul>
-<li><strong>User Registration and Authentication</strong>: Users can create accounts, log in.</li>
+<li><strong>User Registration and Authentication</strong>: Users can log in with google authentication.</li>
 <li><strong>Product Catalog</strong>: The application provides a comprehensive catalog of products with details such as title, description, price, and images.</li>
 <li><strong>Shopping Cart</strong>: A shopping cart functionality allows users to add products.
 <li><strong>User Reviews and Ratings</strong>: Customers can leave reviews and ratings for products, helping others make informed purchasing decisions.</li>
